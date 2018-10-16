@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <!--Link to css-->
+    <link href="@Url.Content("~/Content/StackDesign.css")" rel="stylesheet" type="text/css" />
+    <title>Dictionary Index</title>
+</head>
+
+
+<body>
+    <ul>
+        <li><a href="@Url.Action("AddOne", "Dictionary")">Add One Item to Dictionary</a></li>
+        <li><a href="@Url.Action("HugeList", "Dictionary")">Add Huge List of Items to Dictionary</a></li>
+        <li><a href="@Url.Action("DisplayDictionary", "Dictionary")">Display Dictionary</a></li>
+        <li><a href="@Url.Action("DeleteDictionary", "Dictionary")">Delete From Dictionary</a></li>
+        <li><a href="@Url.Action("ClearDictionary", "Dictionary")">Clear Dictionary</a></li>
+        <li><a href="@Url.Action("SearchDictionary", "Dictionary")">Search Dictionary</a></li>
+        <li><a href="@Url.Action("Index", "Index")">Return to Main Menu</a></li>
+    </ul>
+
+</body>
+
+<!--displays the output in relation to the controller-->
+<h2><font color="red">This is your Dictionary data:</font></h2>
+
+@Html.Raw(ViewBag.MyDictionary)
+<p>@ViewBag.StopWatch</p>
+
+
+</html>
+

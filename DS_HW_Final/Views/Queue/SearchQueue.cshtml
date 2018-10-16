@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <!--Link to css-->
+    <link href="@Url.Content("~/Content/StackDesign.css")" rel="stylesheet" type="text/css" />
+    <title>Queue Index</title>
+</head>
+
+
+<body>
+    <ul>
+        <li><a href="@Url.Action("AddOne", "Queue")">Add One Item to Queue</a></li>
+        <li><a href="@Url.Action("HugeList", "Queue")">Add Huge List of Items to Queue</a></li>
+        <li><a href="@Url.Action("DisplayQueue", "Queue")">Display Queue</a></li>
+        <li><a href="@Url.Action("DeleteQueue", "Queue")">Delete From Queue</a></li>
+        <li><a href="@Url.Action("ClearQueue", "Queue")">Clear Queue</a></li>
+        <li><a href="@Url.Action("SearchQueue", "Queue")">Search Queue</a></li>
+        <li><a href="@Url.Action("Return", "Queue")">Return to Main Menu</a></li>
+    </ul>
+
+</body>
+
+<!--displays the output in relation to the controller-->
+<h2><font color="red">This is your Queue data:</font></h2>
+
+    <p>@ViewBag.Output</p>
+    @if (ViewBag.Output != "\"New Entry 5\" Not Found :(")
+    {
+    <p>Search done in @ViewBag.StopWatch seconds!</p>
+    }
+
+</html>
+

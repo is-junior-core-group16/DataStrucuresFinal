@@ -1,0 +1,35 @@
+﻿<!--This is the index.cshtml for the Queue page, you get here from the main index page when you click it at the top-->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Link to css-->
+    <link href="@Url.Content("~/Content/StackDesign.css")" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width-device-width" />
+    <title>Queue Index</title>
+</head>
+
+
+<body>
+    <ul>
+        <li><a href="@Url.Action("AddOne", "Queue")">Add One Item to Queue</a></li>
+        <li><a href="@Url.Action("HugeList", "Queue")">Add Huge List of Items to Queue</a></li>
+        <li><a href="@Url.Action("DisplayQueue", "Queue")">Display Queue</a></li>
+        <li><a href="@Url.Action("DeleteQueue", "Queue")">Delete From Queue</a></li>
+        <li><a href="@Url.Action("ClearQueue", "Queue")">Clear Queue</a></li>
+        <li><a href="@Url.Action("SearchQueue", "Queue")">Search Queue</a></li>
+        <li><a href="@Url.Action("Index", "Index")">Return to Main Menu</a></li>
+    </ul>
+
+</body>
+
+<!--displays the output in relation to the controller-->
+<p>There are no entries in the Queue</p>
+
+
+
+</html>
+
